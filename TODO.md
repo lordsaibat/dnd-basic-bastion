@@ -4,6 +4,7 @@
 
 - [ ] Add Defensive wall to the list
 - [ ] Add date to the log
+- [ ] Add ability to delete log items
 
 ## Advanced
 
