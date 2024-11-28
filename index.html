@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bastion Web App</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .section {
+      margin-bottom: 20px;
+    }
+    .room-dropdown {
+      width: 200px;
+    }
+    /* Style the button that is used to open and close the collapsible content */
+    .construction {
+      background-color: #eee;
+      color: #444;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 15px;
+    }
+
+    /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+    .active, .construction:hover {
+      background-color: #ccc;
+    }
+
+    /* Style the collapsible content. Note: hidden by default */
+    .content {
+      padding: 0 18px;
+      display: none;
+      overflow: hidden;
+      background-color: #f1f1f1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Bastion Web App</h2>
+    <button id="bastion-start-btn">Start Bastion Turn</button> <button id="bastion-stop-btn">Stop Bastion Turn</button> 
+    <div class="construction">
+        <div class="section">
+          <h3>Basic Facilities</h3>
+          <select id="basic-facility-dropdown" class="room-dropdown">
+            <option value="Bedroom">Bedroom</option>
+            <option value="Dining Room">Dining Room</option>
+            <option value="Parlor">Parlor</option>
+            <option value="Courtyard">Courtyard</option>
+            <option value="Kitchen">Kitchen</option>
+            <option value="Storage">Storage</option>
+          </select>
+          <select id="basic-space-dropdown" class="room-dropdown">
+            <option value="Cramped">Cramped (4 squares)</option>
+            <option value="Roomy">Roomy (16 squares)</option>
+            <option value="Vast">Vast (36 squares)</option>
+          </select>
+          <button id="basic-build-btn">Build</button>
+        </div>
+
+        <div class="section">
+          <h3>Additional Facilities</h3>
+          <select id="additional-facility-dropdown" class="room-dropdown">
+            <option>Closets</option>
+            <option>Corridors</option>
+            <option>Ramps</option>
+            <option>Staircases</option>
+            <option>Doors</option>
+            <option>Windows</option>
+            <option>Defensive Walls</option>
+          </select>
+          <button id="additional-build-btn">Build</button>
+          <ul id="additional-room-list"></ul>
+        </div>
+
+        <div class="section">
+          <h3>Special Facilities</h3>
+          <div class="section">
+            <h3>Level</h3>
+            <select id="level-dropdown" class="room-dropdown">
+              <option value="5">Level 5</option>
+              <option value="9">Level 9</option>
+              <option value="13">Level 13</option>
+              <option value="17">Level 17</option>
+            </select>
+            <button id="load-btn">Load</button>
+            <ul id="special-facility-list"></ul>
+          </div>
+          <select id="special-facility-dropdown" class="room-dropdown">
+          </select>
+          <select id="special-space-dropdown" class="room-dropdown">
+            <option value="Cramped">Cramped (4 squares)</option>
+            <option value="Roomy">Roomy (16 squares)</option>
+            <option value="Vast">Vast (36 squares)</option>
+          </select>
+          <button id="special-build-btn">Build</button>
+          <ul id="special-room-list"></ul>
+        </div>
+    </div>
+    <div class="bastion-turn">
+      <p></p><p></p>
+      <button id="maintain-order-btn" class="bastion-turn">Maintain</button>
+            <p></p><p></p>
+              <select id="bast-level-dropdown" class="bastion-turn">
+              <option value="5" class="bastion-turn">Level 5</option>
+              <option value="9" class="bastion-turn">Level 9</option>
+              <option value="13" class="bastion-turn">Level 13</option>
+              <option value="17" class="bastion-turn">Level 17</option>
+            </select>
+            <button id="bastion-load-btn" class="bastion-turn">Load</button>
+            <ul id="bastion-facility-list"></ul>
+          <select id="bastion-facility-dropdown" class="bastion-turn">
+          </select>
+          <select id="order-dropdown" class="bastion-turn">
+            <option value="Craft" class="bastion-turn">Craft</option>
+            <option value="Empower" class="bastion-turn">Empower</option>
+            <option value="Harvest" class="bastion-turn">Harvest</option>
+            <option value="Recruit" class="bastion-turn">Recruit</option>
+            <option value="Research" class="bastion-turn">Research</option>
+            <option value="Trade" class="bastion-turn">Trade</option>
+          </select>
+          <button id="add-order-btn" class="bastion-turn">Add order</button>
+    </div>
+    <p></p><p></p>
+    <div class="bastion-log">
+      Bastion Log
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
