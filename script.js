@@ -190,7 +190,7 @@ bastmaintainBtn.addEventListener('click', () => {
 
   // Add the new facility to the bastion log events element
   const bastionLogEvent = document.createElement('li');
-  bastionLogEvent.textContent = `Maintain Order Issuesd`;
+  bastionLogEvent.textContent = `Maintain Order Issued`;
   bastionLogEvents.appendChild(bastionLogEvent);
 
   
