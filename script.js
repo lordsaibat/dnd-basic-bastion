@@ -40,13 +40,22 @@ basicBuildBtn.addEventListener('click', () => {
   const selectedSpace = basicSpaceDropdown.options[basicSpaceDropdown.selectedIndex].value;
 
     // Update the basic log element
-    const roomListElement = document.createElement('li');
-    roomListElement.textContent = `${selectedFacility} (${selectedSpace})`;
+    //const roomListElement = document.createElement('li');
+    //roomListElement.textContent = `${selectedFacility} (${selectedSpace})`;
     //basicRoomList.appendChild(roomListElement);
     
     // Add the new facility to the bastion log events element
     const bastionLogEvent = document.createElement('li');
     bastionLogEvent.textContent = `Adding ${selectedFacility} (${selectedSpace})`;
+    
+    // Create a remove button
+    const bastionRemoveBtn = document.createElement('button');
+    bastionRemoveBtn.textContent = 'Remove';
+    bastionRemoveBtn.addEventListener('click', () => {
+      bastionLogEvent.remove();
+    });
+    
+    bastionLogEvent.appendChild(bastionRemoveBtn);
     bastionLogEvents.appendChild(bastionLogEvent);
   });
 
@@ -54,13 +63,22 @@ additionalBuildBtn.addEventListener('click', () => {
   const selectedFacility = additionalDropdown.options[additionalDropdown.selectedIndex].value;
 
   // Add the facility to the basic room list element
-  const roomListElement = document.createElement('li');
-  roomListElement.textContent = `Adding ${selectedFacility}`;
+  //const roomListElement = document.createElement('li');
+  //roomListElement.textContent = `Adding ${selectedFacility}`;
   //basicRoomList.appendChild(roomListElement);
   
   // Add the new facility to the bastion log events element
   const bastionLogEvent = document.createElement('li');
   bastionLogEvent.textContent = `Adding ${selectedFacility}`;
+
+  // Create a remove button
+  const bastionRemoveBtn = document.createElement('button');
+  bastionRemoveBtn.textContent = 'Remove';
+  bastionRemoveBtn.addEventListener('click', () => {
+    bastionLogEvent.remove();
+  });
+    
+  bastionLogEvent.appendChild(bastionRemoveBtn);
   bastionLogEvents.appendChild(bastionLogEvent);
 });
 
@@ -112,6 +130,15 @@ specialBuildBtn.addEventListener('click', () => {
   // Add the new facility to the bastion log events element
   const bastionLogEvent = document.createElement('li');
   bastionLogEvent.textContent = `Adding ${selectedFacility} (${selectedSpace})`;
+
+  // Create a remove button
+  const bastionRemoveBtn = document.createElement('button');
+  bastionRemoveBtn.textContent = 'Remove';
+  bastionRemoveBtn.addEventListener('click', () => {
+      bastionLogEvent.remove();
+  });
+    
+  bastionLogEvent.appendChild(bastionRemoveBtn);
   bastionLogEvents.appendChild(bastionLogEvent);
   
   });
@@ -178,6 +205,15 @@ actionAddBtn.addEventListener('click', () => {
   // Add the new facility to the bastion log events element
   const bastionLogEvent = document.createElement('li');
   bastionLogEvent.textContent = `${selectedFacility} (${selectedOrder})`;
+
+  // Create a remove button
+  const bastionRemoveBtn = document.createElement('button');
+  bastionRemoveBtn.textContent = 'Remove';
+  bastionRemoveBtn.addEventListener('click', () => {
+    bastionLogEvent.remove();
+  });
+    
+  bastionLogEvent.appendChild(bastionRemoveBtn);
   bastionLogEvents.appendChild(bastionLogEvent);
 
 });
